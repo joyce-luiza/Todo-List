@@ -1,7 +1,7 @@
 import React from "react";
 import { v4 as uuid } from "uuid";
 
-const Form = ({ inputText, setInputText, todos, setTodos }) => {
+const Form = ({ inputText, setInputText, todos, setTodos, setStatus }) => {
     const uniqueID = uuid();
 
     const inputTextHandler = (e) => {
@@ -15,6 +15,10 @@ const Form = ({ inputText, setInputText, todos, setTodos }) => {
             { text: inputText, completed: false, id: uniqueID },
         ]);
         setInputText("");
+    };
+
+    const statusHandler = (e) => {
+        setStatus(e.target.value);
     };
 
     return (
@@ -33,7 +37,11 @@ const Form = ({ inputText, setInputText, todos, setTodos }) => {
                 +
             </button>
             <div className="select">
-                <select name="todos" className="filter-todo">
+                <select
+                    name="todos"
+                    className="filter-todo"
+                    onChange={statusHandler}
+                >
                     <option value="all">All</option>
                     <option value="completed">Completed</option>
                     <option value="uncompleted">Uncompleted</option>
