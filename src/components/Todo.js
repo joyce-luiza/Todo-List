@@ -22,7 +22,11 @@ const Todo = ({ text, todo, todos, setTodos }) => {
 
     return (
         <div className="todo">
-            <input type="checkbox" onClick={completeHandler} />
+            <input
+                type="checkbox"
+                onClick={completeHandler}
+                checked={todo.completed}
+            />
             <li className={`todo-item ${todo.completed ? "completed" : ""}`}>
                 {text}
             </li>
