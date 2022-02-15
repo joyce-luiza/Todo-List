@@ -23,19 +23,21 @@ const Form = ({ inputText, setInputText, todos, setTodos, setStatus }) => {
 
     return (
         <form>
-            <input
-                value={inputText}
-                onChange={inputTextHandler}
-                type="text"
-                className="todo-input"
-            />
-            <button
-                onClick={submitTodoHandler}
-                type="submit"
-                className="todo-button"
-            >
-                +
-            </button>
+            <div>
+                <input
+                    value={inputText}
+                    onChange={inputTextHandler}
+                    type="text"
+                    className="todo-input"
+                />
+                <button
+                    onClick={submitTodoHandler}
+                    type="submit"
+                    className="todo-button"
+                >
+                    <i class="ri-add-line"></i>
+                </button>
+            </div>
             <div className="select">
                 <select
                     name="todos"
