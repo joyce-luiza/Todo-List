@@ -1,6 +1,6 @@
 # Todo List
 
-Este projeto consiste em uma mera todo list, desenvolvido com o objetivo de dar uma revisada básica no React.
+Este projeto consiste em uma mera todo list, desenvolvido com o objetivo de dar uma revisada básica no React. Como referência, foi usado um tutorial no Youtube https://www.youtube.com/watch?v=pCA4qpQDZD8 
 
 Se você tiver a fim de rodar o projeto localmente, é necessário primeiramente instalar o node.js na sua máquina. Enfim, lá vai o tutorial:
 
